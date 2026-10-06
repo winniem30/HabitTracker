@@ -300,7 +300,7 @@ function scheduleText(h){
 function calculateStats(state){
   const today=todayISO();
   let current=0, best=0, run=0;
-  const d=new Date(); d.setHours(12,0,0,0);
+  let d=new Date(); d.setHours(12,0,0,0);
   for(let i=0;i<365;i++){
     const s=iso(d);
     const hs=state.habits.filter(h=>isScheduled(h,s));
